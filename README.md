@@ -7,7 +7,7 @@ All the basic stuff working, scene loading, application start up, and a few bell
 
 You'll need to point intelliJ at your JavaFX installation 
 
-If you get errors on start up about the *.fxml file not being found you need to add *.fxml and *.csv to
+If you get errors on start up about the *.fxml file not being found you need to add *.fxml and *.css to
 the list of files that intelliJ copies into the build directory. Options > Compiler > Resource Patterns
 
 Have fun.
