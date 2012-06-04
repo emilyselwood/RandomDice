@@ -29,11 +29,16 @@ object RandomDice {
 class RandomDice extends Application {
     override def start(primaryStage: Stage) {
 
+        // Initial setup of the stage
         primaryStage.setTitle(RandomDice.title)
-        // set a few handlers that can be useful. Remove if you don't need them.
+        // In this case this shouldn't be re-sizable.
+        primaryStage.setResizable(false)
+		
+        // Set a few handlers that can be useful. Remove if you don't need them.
         primaryStage.setOnHiding(new ShutdownHandler())
-        primaryStage.heightProperty().addListener(new WindowSizeListener("window.Height", primaryStage))
-        primaryStage.widthProperty().addListener(new WindowSizeListener("window.Width", primaryStage))
+        // Disabled as we have stopped resizing
+        //primaryStage.heightProperty().addListener(new WindowSizeListener("window.Height", primaryStage))
+        //primaryStage.widthProperty().addListener(new WindowSizeListener("window.Width", primaryStage))
 
         // Actually load our scene. As long as your controller and fxml file are in the same place this should work fine.
         // The second parameter is to the properties file for localization.
