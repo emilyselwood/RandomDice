@@ -19,8 +19,6 @@ import org.wselwood.common.gui.SceneLoader
 object RandomDice {
 
     val title = "Dice"
-    val width: Double = 204.0
-    val height: Double = 94.0
 
     def main(args: Array[String]) {
         Application.launch(classOf[RandomDice], args: _*) // have to use :_* to pass the array through to the var args
@@ -42,9 +40,8 @@ class RandomDice extends Application {
         val loaded = SceneLoader[DiceController](classOf[DiceController].getResource("Dice.fxml"), "org.wselwood.randomdice.gui.Dice")
 
         // Create the scene from the one we loaded.
-        val scene = new Scene(loaded.parent, RandomDice.width, RandomDice.height)
+        val scene = new Scene(loaded.parent)
 
-        loaded.controller.constructionFinished()
         // Attach to the stage and show the stage
         primaryStage.setScene(scene)
         primaryStage.show()
